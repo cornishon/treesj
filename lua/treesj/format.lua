@@ -42,6 +42,7 @@ function M._format(mode, override)
     found, tsn_data = pcall(search.get_configured_node, start_node)
     if not found then
       notify.warn(tsn_data)
+      vim.cmd.join()
       return
     end
 
